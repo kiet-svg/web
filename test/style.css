@@ -1,0 +1,212 @@
+/* Reset các thuộc tính mặc định */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: fantasy;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Thanh điều hướng */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    height: 80px;
+    background-color: aliceblue;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+p > a {
+    color: aqua;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: bolder;
+    transition: all 0.5s ease;
+}
+
+p > a:hover {
+    color: black;
+}
+
+/* Menu */
+ul.menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.buttons {
+    display: flex;
+    gap: 30px;
+    background: none;
+}
+
+.buttons .login {
+    padding: 8px 15px;
+    border: 2px solid aqua;
+    background-color: transparent;
+    font-weight: bolder;
+    color: aqua;
+    transition: all 0.5s ease;
+}
+
+.buttons .login:hover {
+    background-color: aqua;
+    color: aliceblue;
+}
+
+.buttons .get-started {
+    padding: 8px 15px;
+    border: none;
+    background-color: aqua;
+    font-weight: bolder;
+    color: aliceblue;
+    transition: all 0.5s ease-out;
+}
+
+.buttons .get-started:hover {
+    background-color: aliceblue;
+    color: aqua;
+}
+
+ul.menu li a {
+    font-weight: bolder;
+    font-size: 18px;
+    transition: all 0.5s ease-out;
+}
+
+.menu li a:hover {
+    color: aqua;
+}
+
+/* Header */
+header {
+    padding: 0 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: visible;
+}
+
+header .noi_dung h1 {
+    font-size: 80px;
+}
+
+header .noi_dung p {
+    margin: 40px;
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+a.elma {
+    margin-left: 20px;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    height: 30px;
+    width: 100px;
+    border-radius: 60px;
+    background-color: aqua;
+    transition: all 0.5s ease;
+}
+
+a.elma i {
+    font-size: 24px;
+}
+
+a.elma:hover {
+    border-radius: 60px;
+    width: 250px;
+}
+
+header .noi_dung {
+    margin: 10px;
+}
+
+header .noi_dung span {
+    color: aqua;
+}
+
+.img {
+    margin-right: 80px;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Tiêu đề */
+.ht {
+    padding: 0 80px;
+    font-size: 40px;
+    margin-top: 40px;
+}
+
+.ht i {
+    font-size: 40px;
+    color: red;
+}
+
+.ht span {
+    color: aqua;
+}
+
+/* Grid sắp xếp ảnh */
+.body {
+    display: grid; /* Sử dụng Grid */
+    /* grid-template-rows: 100px 100px 100px; 3 hàng */
+    grid-gap: 30px; /* Khoảng cách giữa các khung */
+
+    grid-template-columns: repeat(5, 1fr )
+}
+
+.body > div {
+    width: 100%; /* Đảm bảo kích thước cột */
+    aspect-ratio: 1; /* Duy trì tỷ lệ vuông */
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: bisque;
+}
+
+.body > div img {
+    width: 100%; /* Căn chỉnh ảnh theo khung */
+    height: 100%;
+    object-fit: cover; /* Cắt ảnh cho phù hợp */
+    border-radius: 10px;
+}
+
+/* Hàng thứ hai chỉ có 2 ảnh */
+/* .body > div:nth-child(4),
+.body > div:nth-child(5) { */
+    /* grid-column: span 3; Ảnh chiếm toàn bộ hàng */
+
+
+/* Nội dung của mỗi khung */
+.body > div p {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.body > div a {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: aqua;
+    color: white;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.body > div a:hover {
+    background-color: darkcyan;
+}
